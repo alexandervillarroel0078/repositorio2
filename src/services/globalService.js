@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000/api/historial/filtrar';  // URL base
+//const BASE_URL = 'http://localhost:5000/api/historial/filtrar';  // URL base
+const BASE_URL = 'https://smartcart-backend-klyi.onrender.com/api/historial/filtrar';
 
 export const filtrarHistorial = async (filters) => {
   try {

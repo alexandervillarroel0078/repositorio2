@@ -8,8 +8,8 @@ export const listarGradosAgrupados = async () => {
 
 
 
-const API_URL = 'http://localhost:5000/api/grados';
-
+//const API_URL = 'http://localhost:5000/api/grados';
+const API_URL= 'https://smartcart-backend-klyi.onrender.com/api/historial/filtrar';
 export const obtenerMateriasPorGrado = async (gestionId, gradoId) => {
   const response = await fetch(`${API_URL}/gestion/${gestionId}/grado/${gradoId}/materias`);
   if (!response.ok) {
