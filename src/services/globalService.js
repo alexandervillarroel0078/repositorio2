@@ -1,21 +1,5 @@
 import axios from 'axios';
 
-//const BASE_URL = 'http://localhost:5000/api/historial/filtrar';  // URL base
-
-// const BASE_URL = import.meta.env.VITE_API_URL;
-
-// export const filtrarHistorial = async (filters) => {
-//   try {
-//     const params = new URLSearchParams(filters).toString();  // Convertir filtros a parámetros de consulta
-//     const response = await axios.get(`${BASE_URL}?${params}`);  // Hacer la solicitud GET
-//     return response.data;  // Retornar los datos
-//   } catch (error) {
-//     console.error("Error al obtener el historial:", error);
-//     throw error;
-//   }
-// };
-
-
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const filtrarHistorial = async (filters) => {
@@ -29,11 +13,10 @@ export const filtrarHistorial = async (filters) => {
   }
 };
 
-
 export const listarHistorial = async () => {
   try {
-    const response = await axios.get(BASE_URL);  // Hacer la solicitud GET
-    return response.data;  // Retornar los datos
+    const response = await axios.get(`${BASE_URL}/api/historial/filtrar`);
+    return response.data;
   } catch (error) {
     console.error("Error al obtener el historial:", error);
     throw error;
