@@ -6,7 +6,8 @@ const api = axios.create({
  //para varias maquinas en la misma red
   //baseURL: 'http://192.168.0.12:5000',
 //produccion
-baseURL: import.meta.env.VITE_API_URL,
+baseURL: process.env.REACT_APP_API_URL,
+
 
 });
 api.interceptors.request.use((config) => {

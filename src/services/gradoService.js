@@ -17,7 +17,7 @@ export const listarGradosAgrupados = async () => {
 //   }
 //   return await response.json();
 // };
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const obtenerMateriasPorGrado = async (gestionId, gradoId) => {
   const response = await fetch(`${BASE_URL}/api/historial/filtrar/gestion/${gestionId}/grado/${gradoId}/materias`);
